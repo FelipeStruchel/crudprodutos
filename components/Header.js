@@ -27,9 +27,14 @@ export default function Header() {
     if (!showHeader) return null;
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: '#424242', color: '#fff' }}>
+<AppBar position="static" sx={{ backgroundColor: '#424242', color: '#fff' }}>
             <Toolbar>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                <Typography
+                    variant="h6"
+                    component="div"
+                    sx={{ flexGrow: 1, cursor: 'pointer', color: '#fff', '&:hover': { color: '#ffeb3b' } }}
+                    onClick={() => handleNavigation('/')}
+                >
                     Banana Store
                 </Typography>
                 <Button color="inherit" onClick={() => handleNavigation('/produtos/novo')} sx={{ color: '#fff' }}>

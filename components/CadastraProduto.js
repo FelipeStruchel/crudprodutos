@@ -43,8 +43,6 @@ export default function CadastraProduto() {
             }
         });
 
-        console.log(produto, response.data);
-
         if (response.status === 200 && response.data._id) {
             alert('Produto cadastrado com sucesso');
             setNome('');
